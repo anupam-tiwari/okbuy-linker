@@ -1,7 +1,7 @@
 import { compress } from '@/next.config';
 import { useState, useEffect } from 'react';
-import contract from './contract';
-import web3 from './web3';
+import contract from '../components/contract';
+import web3 from '../components/web3';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import logo from '../public/logo.webp';
