@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import logo from '../public/logo.webp';
 import buy from '../public/buy.webp';
-import asset_gif from '../public/asset.gif';
+import asset_gif from '../public/gun.gif';
 
 export default function Home() {
   const router = useRouter();
@@ -118,8 +118,8 @@ export default function Home() {
           <div>
             <Image 
               src={asset_gif}
-              width={300}
-              height={300}></Image>
+              width={500}
+              height={500}></Image>
           </div>
           {asset && <div className='text-black text-xl p-8'>
             <h1>Item: {asset['name']}</h1>
