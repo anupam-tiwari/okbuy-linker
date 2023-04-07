@@ -50,8 +50,8 @@ export default function Home() {
   };
 
   const exchangeAsset = async (assetId, newOwner) => {
-    console.log(assetId, newOwner)
-    if(newOwner == account){
+    console.log(assetId, account)
+    if(newOwner == asset['owner']){
       alert("you already own this asset")
     }else{
       await contract.methods.exchangeGameAsset(assetId, newOwner).send({
