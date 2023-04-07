@@ -21,16 +21,25 @@ export default function Home() {
 
 
   useEffect(() => {
+    // async function loadAccount() {
+    //   const accounts = await web3.eth.getAccounts();
+    //   setAccount(accounts[0]);
+    // }
+
+    // loadAccount();
+    if (id) {
+      gameAssets(id)
+    }
+  },[id]);
+
+  useEffect(() => {
     async function loadAccount() {
       const accounts = await web3.eth.getAccounts();
       setAccount(accounts[0]);
     }
 
     loadAccount();
-    if (id) {
-      gameAssets(id)
-    }
-  },[id]);
+  },[]);
 
   const createAsset = async () => {
     await contract.methods.createGameAsset(assetName, assetValue).send({
